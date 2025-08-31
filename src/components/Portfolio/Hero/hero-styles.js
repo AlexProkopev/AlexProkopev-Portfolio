@@ -1,0 +1,1 @@
+export const listStylesHero = "flex  gap-2 items-center justify-center mt-[15px] md:justify-start md:ml-[15px]";

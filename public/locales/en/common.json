@@ -1,0 +1,12 @@
+{
+  "welcomeStart": "Welcome to my portfolio ",
+  "welcomeEnd": "Click on the Start button to continue",
+  "welcomeNotify": "Please, wait until the command is fully typed",
+
+  "home": "Home",
+  "about": "About",
+  "projects": "Projects",
+  "contact": "Contact",
+
+  "developer": "Full-Stack Developer"
+}
