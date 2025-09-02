@@ -8,5 +8,7 @@
   "projects": "Projects",
   "contact": "Contact",
 
-  "developer": "Full-Stack Developer"
+  "developer": "Full-Stack Developer",
+  "contactsInfo": "Contact me via social networks:",
+  "technologies": "These are the technologies I work with"
 }

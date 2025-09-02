@@ -1,41 +1,33 @@
-'use client'
+"use client";
 
+import { useTranslation } from "next-i18next";
 import PortfolioHeader from "./Header/portfolio-header";
 import Hero from "./Hero/hero";
-
-
-
+import ProjectSection from "./Project-Section/project-section";
+import ScrollProgress from "./ui/scroll-progress";
 
 const Portfolio = () => {
+  const { ready } = useTranslation("common");
 
-
+  if (!ready) return <div>Loading...</div>;
 
   return (
-  <div className=" min-h-[100vh] bg-[radial-gradient(circle,rgba(7,26,145,1)_0%,rgba(0,0,0,1)_100%)]">
-   <PortfolioHeader />
+    <div className=" min-h-[100vh] bg-[radial-gradient(circle,rgba(7,26,145,1)_0%,rgba(0,0,0,1)_100%)]">
+      <ScrollProgress />
 
-  <main className="container">
+      <PortfolioHeader />
 
-    <Hero/>
-  
-    <section>
-       Main Portfolio Section
-    </section>
-    <section>
-        Project Portfolio Section
-    </section>
-    <section>
-        Skills Portfolio Section
-    </section>
-    <section>
-        Contacts Portfolio Section
-    </section>
-    <section>
-        Experience Portfolio Section
-    </section>
-    
-  </main>
-</div>
+      <main className="container">
+        <Hero />
+
+        <ProjectSection />
+
+        <section>Project Portfolio Section</section>
+
+        <section></section>
+        <section>Experience Portfolio Section</section>
+      </main>
+    </div>
   );
 };
 

@@ -7,13 +7,13 @@ import { useEffect } from "react";
 const HeroTitle = () => {
   const content = "React.js, Next.js, TypeScript, Node.js, Docker, Git...";
   const { text, animateText, index } = useMakeAnimation();
-  const { t, ready } = useTranslation('common');
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     animateText(content);
   }, [index, animateText]);
 
-//  if (!ready) return <div>Loading...</div>;
+
 
   return (
     <>

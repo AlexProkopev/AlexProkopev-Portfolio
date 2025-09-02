@@ -1,17 +1,13 @@
-import Image from "next/image";
 import HeroTitle from "./hero-title";
 import Contacts from "./hero-contacts";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import TechSkills from "./hero-tech-skills";
-import { useTranslation } from "next-i18next";
+import ScrollDown from "./scroll-down";
 
 
 const Hero = () => {
 
     const isMobile = useMediaQuery("(max-width: 768px)");
-    const {ready} = useTranslation('common');
-
-    if (!ready) return <div>Loading...</div>;
 
   return (
     <section className=" relative pt-[70px] overflow-hidden ">
@@ -27,6 +23,7 @@ const Hero = () => {
       
       <Contacts />
       <TechSkills />
+      <ScrollDown />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import LogoLoop from "./tech-skills-animate";
+import { useTranslation } from "next-i18next";
 
 const imageLogos = [
   { src: "/svg-icons/development.svg", alt: "Development", href: "#" },
@@ -13,13 +14,15 @@ const imageLogos = [
 
 
 const TechSkills = () => {
-
+    const {t} = useTranslation("common");
     const isMobile = useMediaQuery("(max-width: 768px)");
   return (
      <div className="mt-[50px]">
+           
             <p className="text-center text-sm text-secondary mb-[20px]">
-              These are the technologies I work with
+              {t("technologies")}
             </p>
+            
           <LogoLoop
             logos={imageLogos}
             speed={120}
