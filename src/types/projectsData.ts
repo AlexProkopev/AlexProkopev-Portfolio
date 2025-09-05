@@ -1,7 +1,7 @@
 export type Project = {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   link: string;
   dev: string[];

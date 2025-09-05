@@ -1,0 +1,25 @@
+{
+  "project1_title": "CRM Ресторан",
+  "project1_description": "Админ панель для управления рабочими процессами ресторана",
+  
+  "project2_title": "Кинотеатр",
+  "project2_description": "Платформа для поиска фильмов и бронирования билетов",
+  
+  "project3_title": "Лендинг",
+  "project3_description": "Адаптивная лендинг-страница для презентации продукта",
+  
+  "project4_title": "Mint Switch",
+  "project4_description": "Web3 проект с функционалом обмена токенов",
+  
+  "project5_title": "Парсер",
+  "project5_description": "Автоматический сбор и обработка данных",
+  
+  "project6_title": "Пет-проект",
+  "project6_description": "Экспериментальный проект с кастомными функциями",
+  
+  "project7_title": "Simply Chocolate",
+  "project7_description": "Сайт для магазина шоколада",
+  
+  "project8_title": "Drinkify",
+  "project8_description": "Приложение с рецептами коктейлей и рекомендациями"
+}

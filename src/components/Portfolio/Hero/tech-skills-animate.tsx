@@ -1,4 +1,4 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
+
 import Image from "next/image";
 import React, {
   useCallback,
@@ -79,7 +79,7 @@ const useResizeObserver = (
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-  }, dependencies);
+  }, [elements, callback, dependencies]);
 };
 
 const useImageLoader = (
@@ -119,7 +119,7 @@ const useImageLoader = (
         img.removeEventListener("error", handleImageLoad);
       });
     };
-  }, dependencies);
+  }, [seqRef, onLoad, dependencies]);
 };
 
 const useAnimationLoop = (
@@ -192,7 +192,7 @@ const useAnimationLoop = (
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, isHovered, pauseOnHover]);
+  }, [targetVelocity, seqWidth, isHovered, pauseOnHover, trackRef]);
 };
 
 export const LogoLoop = React.memo<LogoLoopProps>(
@@ -221,7 +221,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     );
     const [isHovered, setIsHovered] = useState<boolean>(false);
 
-    const isMobile = useMediaQuery("(max-width: 768px)");
+    // const isMobile = useMediaQuery("(max-width: 768px)");
 
     const targetVelocity = useMemo(() => {
       const magnitude = Math.abs(speed);

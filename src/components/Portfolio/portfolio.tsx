@@ -5,6 +5,7 @@ import PortfolioHeader from "./Header/portfolio-header";
 import Hero from "./Hero/hero";
 import ProjectSection from "./Project-Section/project-section";
 import ScrollProgress from "./ui/scroll-progress";
+import AboutMe from "./AboutMe/about-me";
 
 const Portfolio = () => {
   const { ready } = useTranslation("common");
@@ -22,7 +23,7 @@ const Portfolio = () => {
 
         <ProjectSection />
 
-        <section>Project Portfolio Section</section>
+        <AboutMe/>
 
         <section></section>
         <section>Experience Portfolio Section</section>

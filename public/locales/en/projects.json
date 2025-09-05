@@ -1,0 +1,25 @@
+{
+  "project1_title": "CRM Restaurant",
+  "project1_description": "Admin panel for managing restaurant workflow",
+
+  "project2_title": "Cinema",
+  "project2_description": "Movie browsing and ticket booking platform",
+
+  "project3_title": "Landing Page",
+  "project3_description": "Responsive landing page for product showcase",
+
+  "project4_title": "Mint Switch",
+  "project4_description": "Web3 project with token swap functionality",
+
+  "project5_title": "Parser",
+  "project5_description": "Automated data scraper and parser tool",
+
+  "project6_title": "Pet Project",
+  "project6_description": "Experimental project with custom features",
+
+  "project7_title": "Simply Chocolate",
+  "project7_description": "Website for chocolate shop",
+
+  "project8_title": "Drinkify",
+  "project8_description": "Cocktail recipes and recommendation app"
+}

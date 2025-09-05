@@ -5,7 +5,7 @@ export const listStyles =
   "flex space-x-4 absolute top-5 left-[50%] transform -translate-x-1/2";
 
 export const wrapperWelcome =
-  "pl-[15px] pr-[15px] w-screen h-screen absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col  items-center justify-center";
+  "pl-[15px] pr-[15px] w-screen h-[95vh] absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col  items-center justify-center";
 
 export const titleStyles = "w-[355px] text-l font-bold text-center text-white  md:text-xl xl:text-2xl xl:w-full md:w-full";
 
