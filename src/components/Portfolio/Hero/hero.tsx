@@ -8,7 +8,7 @@ const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <section className=" relative pt-[70px] overflow-hidden ">
+    <section className=" relative pt-[70px] overflow-hidden">
       <HeroTitle />
 
       <img

@@ -13,7 +13,7 @@ const Portfolio = () => {
   if (!ready) return <div>Loading...</div>;
 
   return (
-    <div className=" min-h-[100vh] bg-[radial-gradient(circle,rgba(7,26,145,1)_0%,rgba(0,0,0,1)_100%)]">
+    <div className=" min-h-[100vh] bg-[radial-gradient(circle,rgba(7,26,145,1)_0%,rgba(0,0,0,1)_100%)] overflow-hidden">
       <ScrollProgress />
 
       <PortfolioHeader />

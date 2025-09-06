@@ -33,7 +33,7 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => {
         duration: 0.6,
         delay: index * 0.1,
       }}
-      className={listItemStyles}
+      className={`${listItemStyles} overflow-hidden`}
     >
       <a href={project.link} target="_blank" className={linkWrapperStyles}>
         <div className={frontCardStyles}>
