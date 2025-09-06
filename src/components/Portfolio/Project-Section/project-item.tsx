@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 import { Project } from "@/types/projectsData";
 import ProjectItemBack from "./project-item-back";
 import { useTranslation } from "next-i18next";
+import {
+  cardContentStyles,
+  cardDescriptionStyles,
+  cardTitleStyles,
+  frontCardStyles,
+  imageWrapperStyles,
+  linkWrapperStyles,
+  listItemStyles,
+} from "./project-section.styles";
 
 interface ProjectItemProps {
   project: Project;
@@ -15,18 +24,20 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => {
   const { t } = useTranslation("projects");
   return (
     <motion.li
-      initial={{ opacity: 0, y: -100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group [perspective:1000px]"
+      initial={{ x: -200, rotateY: -45, opacity: 0 }}
+      whileInView={{ x: 0, rotateY: 0, opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 10,
+        duration: 0.6,
+        delay: index * 0.1,
+      }}
+      className={listItemStyles}
     >
-      <a
-        href={project.link}
-        target="_blank"
-        className="relative block w-full h-64 [transform-style:preserve-3d] transition-transform duration-700 group-hover:[transform:rotateY(180deg)]"
-      >
-        <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg bg-[#0f0f1a] [backface-visibility:hidden]">
-          <div className="relative w-full h-40">
+      <a href={project.link} target="_blank" className={linkWrapperStyles}>
+        <div className={frontCardStyles}>
+          <div className={imageWrapperStyles}>
             <Image
               src={project.image}
               alt={project.titleKey}
@@ -34,13 +45,9 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => {
               className="object-cover"
             />
           </div>
-          <div className="p-4">
-            <h3 className="text-xl font-semibold text-white mb-2">
-              {t(project.titleKey)}
-            </h3>
-            <p className="text-gray-400 text-sm line-clamp-2">
-              {t(project.descriptionKey)}
-            </p>
+          <div className={cardContentStyles}>
+            <h3 className={cardTitleStyles}>{t(project.titleKey)}</h3>
+            <p className={cardDescriptionStyles}>{t(project.descriptionKey)}</p>
           </div>
         </div>
         <ProjectItemBack dev={project.dev} />

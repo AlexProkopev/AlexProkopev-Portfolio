@@ -1,3 +1,4 @@
+import useHandlers from "@/hooks/useHandlers";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -5,18 +6,11 @@ import Image from "next/image";
 const ScrollDown = () => {
 
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const handleScroll = () => {
-    setTimeout(() => {
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth",
-      });
-    }, 300);
-  };
+  const { handleScroll } = useHandlers();
 
   return (
     <motion.button
-      onClick={handleScroll}
+      onClick={() => handleScroll('aboutme')}
       type="button"
       className="block mx-auto mt-[50px]"
       animate={{ y: [0, -20, 0] }}

@@ -1,17 +1,44 @@
-const AboutMeContent = () => {
-  return (
-    <div className="mt-[10px] space-y-3 text-center max-w-[600px] mx-auto leading-relaxed">
-      <p className="font-semibold text-lg">{`Hello, I'm Prokopiev Oleksandr`}</p>
+import useMakeAnimation from "@/hooks/useMakeAnimation";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  contentHeaderStyles,
+  contentHighlightStyles,
+  contentWrapperStyles,
+} from "./about-me-styles";
+import { useTranslation } from "next-i18next";
 
-      <p>
-        A graduate of the online school{" "}
-        <span className="text-[#00e0ff] font-medium">
-          Go-it Fullstack React Developer
+const AboutMeContent = () => {
+  const { t } = useTranslation('aboutme');
+  const content = 'Fullstack React Developer...';
+  const { text, animateText, index } = useMakeAnimation();
+
+  useEffect(() => {
+    animateText(content);
+  }, [index, animateText, content]);
+  return (
+    <div className={contentWrapperStyles}>
+      <motion.p
+        className={contentHeaderStyles}
+        initial={{ x: 200, rotateY: -45, opacity: 0 }}
+        whileInView={{ x: 0, rotateY: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 80, damping: 10 }}
+      >
+        {text}
+        {text.length < 30 && "|"}
+      </motion.p>
+
+      <motion.p
+        initial={{ x: -200, rotateY: -45, opacity: 0 }}
+        whileInView={{ x: 0, rotateY: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 80, damping: 10 }}
+      >
+        {t("descriptionStart")}{" "}
+        <span className={contentHighlightStyles}>
+          {t("descriptionMiddle")}
         </span>
-        , with a keen interest in front-end and back-end development. I am
-        focused on creating engaging digital solutions and always strive to
-        deliver the best results in every project I work on.
-      </p>
+        {t("descriptionEnd")}
+      </motion.p>
     </div>
   );
 };

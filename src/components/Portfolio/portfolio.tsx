@@ -8,7 +8,7 @@ import ScrollProgress from "./ui/scroll-progress";
 import AboutMe from "./AboutMe/about-me";
 
 const Portfolio = () => {
-  const { ready } = useTranslation("common");
+  const { ready } = useTranslation();
 
   if (!ready) return <div>Loading...</div>;
 
@@ -21,9 +21,8 @@ const Portfolio = () => {
       <main className="container">
         <Hero />
 
+        <AboutMe />
         <ProjectSection />
-
-        <AboutMe/>
 
         <section></section>
         <section>Experience Portfolio Section</section>

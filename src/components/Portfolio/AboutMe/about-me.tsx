@@ -1,32 +1,25 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
-import Image from "next/image";
 import MyQuotes from "./my-quotes";
 import AboutMeContent from "./content-about-me";
 import ActionsButton from "./actions-btn";
 
+import TitleAboutMe from "./title";
+import ImgDesc from "./img-profile/img-desc";
+import ImgMobile from "./img-profile/img-mobile";
+import { sectionStyles } from "./about-me-styles";
+import { useTranslation } from "next-i18next";
+
 const AboutMe = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const {ready} = useTranslation('aboutme');
+  if(!ready) return <div>Loading...</div>
   return (
-    <section className="text-secondary px-4 py-8 max-w-[800px] mx-auto">
-      <h3 className="text-2xl font-bold text-center mb-6 tracking-wide">
-        About Me
-      </h3>
-
-      
-        {isMobile && (
-          <Image
-            src="/logo/profile.jpg"
-            alt="About Me"
-            width={180}
-            height={180}
-            className=" rounded-full mx-auto shadow-lg shadow-[#00e0ff]/20"
-          />
-        )}
-
-        <MyQuotes />
-        <AboutMeContent />
-        <ActionsButton />
-
+    <section id="aboutme" className={sectionStyles}>
+      <TitleAboutMe />
+      <ImgMobile />
+      <MyQuotes />
+      <AboutMeContent />
+      <ActionsButton />
+      <ImgDesc />
     </section>
   );
 };

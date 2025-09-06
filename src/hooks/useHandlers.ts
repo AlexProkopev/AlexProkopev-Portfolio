@@ -16,29 +16,43 @@ function useHandlers() {
     }
   };
 
-  const handleClickStart = (text:string,setShow: (show: boolean) => void,t: (key: string) => string) => {
-      if (text.length < 19) {
-        Notiflix.Notify.failure(t("welcomeNotify"), {
-          timeout: 560,
-          position: "center-center",
-          fontSize: "16px",
-          width: "350px",
-          borderRadius: "8px",
-          cssAnimationStyle: "zoom",
-          clickToClose: true,
-        });
-  
-        return;
+  const handleClickStart = (
+    text: string,
+    setShow: (show: boolean) => void,
+    t: (key: string) => string
+  ) => {
+    if (text.length < 19) {
+      Notiflix.Notify.failure(t("welcomeNotify"), {
+        timeout: 560,
+        position: "center-center",
+        fontSize: "16px",
+        width: "350px",
+        borderRadius: "8px",
+        cssAnimationStyle: "zoom",
+        clickToClose: true,
+      });
+
+      return;
+    }
+    setShow(false);
+    setTimeout(() => {
+      router.push("/portfolio");
+    }, 500);
+  };
+
+  const handleScroll = (section: string) => {
+    setTimeout(() => {
+      const el = document.getElementById(section);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
       }
-      setShow(false);
-      setTimeout(() => {
-        router.push("/portfolio");
-      }, 500);
-    };
+    }, 300);
+  };
 
   return {
     handlePressEnter,
-    handleClickStart
+    handleClickStart,
+    handleScroll,
   };
 }
 

@@ -8,7 +8,9 @@ const Contacts = () => {
 
   return (
     <>
-      <p className="text-secondary text-center md:text-start md:mt-[10px]">{ t("contactsInfo")}</p>
+      <p className="text-secondary text-center md:text-start md:mt-[10px]">
+        {t("contactsInfo")}
+      </p>
       <ContactBtnList listStyles={listStylesHero} />
     </>
   );

@@ -3,6 +3,7 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { useRef, useMemo } from "react";
 import * as THREE from "three";
+import { backCardStyles } from "./project-section.styles";
 
 interface ProjectItemBackProps {
   dev: string[];
@@ -31,7 +32,10 @@ function FlyingIcons({ dev }: { dev: string[] }) {
   return (
     <group ref={groupRef}>
       {textures.map((texture, i) => (
-        <mesh key={i} position={[positions[i].x, positions[i].y, positions[i].z]}>
+        <mesh
+          key={i}
+          position={[positions[i].x, positions[i].y, positions[i].z]}
+        >
           <planeGeometry args={[1, 1]} />
           <meshBasicMaterial map={texture} transparent />
         </mesh>
@@ -42,7 +46,7 @@ function FlyingIcons({ dev }: { dev: string[] }) {
 
 const ProjectItemBack = ({ dev }: ProjectItemBackProps) => {
   return (
-    <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+    <div className={backCardStyles}>
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <FlyingIcons dev={dev} />

@@ -1,23 +1,43 @@
+import useHandlers from "@/hooks/useHandlers";
+import { motion } from "framer-motion";
+import {
+  actionsWrapperStyles,
+  downloadCvBtnStyles,
+  goToProjectBtnStyles,
+} from "./about-me-styles";
+import { useTranslation } from "next-i18next";
+
 const ActionsButton = () => {
+  const { handleScroll } = useHandlers();
+  const {t} = useTranslation('aboutme');
+
   return (
-    <div className="flex flex-wrap gap-4 justify-center mt-4">
+    <motion.div
+      initial={{ y: -200, rotateY: -45, opacity: 0 }}
+      whileInView={{ y: 0, rotateY: 0, opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 10,
+      }}
+      className={actionsWrapperStyles}
+    >
       <button
         type="button"
-        className="px-5 py-2 rounded-lg bg-[#0a0d12]/80 border border-[#00e0ff]/40 
-            text-[#00e0ff] font-medium shadow-md hover:shadow-[0_0_12px_rgba(0,224,255,0.4)] 
-            transition duration-300"
+        className={goToProjectBtnStyles}
+        onClick={() => handleScroll("projects")}
       >
-        Go to project
+        {t("goToProjectBtn")}
       </button>
-      <button
+      <a
+        href="/cv/cv-alex-prokopiev.pdf"
+        download
         type="button"
-        className="px-5 py-2 rounded-lg bg-[#00e0ff]/10 border border-[#00e0ff]/40 
-            text-[#e0e0e0] font-medium shadow-md hover:shadow-[0_0_12px_rgba(0,224,255,0.4)] 
-            transition duration-300"
+        className={downloadCvBtnStyles}
       >
-        Download CV
-      </button>
-    </div>
+        {t("downloadCvBtn")}
+      </a>
+    </motion.div>
   );
 };
 

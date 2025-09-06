@@ -1,19 +1,16 @@
 import useMakeAnimation from "@/hooks/useMakeAnimation";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-
 import { useEffect } from "react";
 
 const HeroTitle = () => {
   const content = "React.js, Next.js, TypeScript, Node.js, Docker, Git...";
   const { text, animateText, index } = useMakeAnimation();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     animateText(content);
   }, [index, animateText]);
-
-
 
   return (
     <>
@@ -28,7 +25,7 @@ const HeroTitle = () => {
         }}
         className="text-secondary font-bold text-2xl text-center md:text-start"
       >
-         {t("developer")}
+        {t("developer")}
       </motion.h3>
       <motion.p
         initial={{ opacity: 0, x: -400 }}
