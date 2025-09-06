@@ -15,9 +15,9 @@ export const frontCardStyles =
 export const backCardStyles =
   "absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]";
 
-export const imageWrapperStyles = "relative w-full h-40";
+export const imageWrapperStyles = "relative w-full h-40 overflow-hidden rounded-t-xl";
 
-export const cardContentStyles = "p-4";
+export const cardContentStyles = "pt-2 pl-2 pr-2";
 
 export const cardTitleStyles = "text-xl font-semibold text-white mb-2";
 

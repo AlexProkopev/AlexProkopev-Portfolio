@@ -49,10 +49,16 @@ function useHandlers() {
     }, 300);
   };
 
+   const handleNavigate = (setIsOpen: (isOpen: boolean) => void, section: string) => {
+   handleScroll(section)
+    setTimeout(()=> setIsOpen(false), 300);
+  };
+
   return {
     handlePressEnter,
     handleClickStart,
     handleScroll,
+    handleNavigate
   };
 }
 

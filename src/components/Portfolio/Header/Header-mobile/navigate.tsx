@@ -3,8 +3,19 @@ import { motion } from "framer-motion";
 import { listStylesHeader, styleButtonHeader } from "../header-styles";
 import { useTranslation } from "next-i18next";
 import LangBtnList from "../../../Welcome/lng-btn-list";
-const NavigateMobile = () => {
+import useHandlers from "@/hooks/useHandlers";
+
+interface NavigateMobileProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const NavigateMobile = ({ isOpen, setIsOpen }: NavigateMobileProps) => {
   const { t } = useTranslation("common");
+
+  const {handleNavigate} = useHandlers()
+
+  
 
   return (
     <motion.nav
@@ -19,6 +30,7 @@ const NavigateMobile = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
+          onClick={() => handleNavigate(setIsOpen, "home")}
         >
           <p>{t("home")}</p>
         </motion.li>
@@ -27,6 +39,7 @@ const NavigateMobile = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
+          onClick={() => handleNavigate(setIsOpen, "aboutme")}
         >
           <p>{t("about")}</p>
         </motion.li>
@@ -35,6 +48,7 @@ const NavigateMobile = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
+          onClick={() => handleNavigate(setIsOpen, "projects")}
         >
           <p>{t("projects")}</p>
         </motion.li>
@@ -43,6 +57,7 @@ const NavigateMobile = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
+          onClick={() => handleNavigate(setIsOpen, "contact")}
         >
           <p>{t("contact")}</p>
         </motion.li>

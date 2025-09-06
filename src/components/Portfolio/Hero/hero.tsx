@@ -8,7 +8,7 @@ const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <section className=" relative pt-[70px] overflow-hidden">
+    <section id="home" className="relative pt-[140px] overflow-hidden">
       <HeroTitle />
 
       <img
@@ -16,7 +16,7 @@ const Hero = () => {
         width={isMobile ? 200 : 240}
         height={isMobile ? 200 : 200}
         alt="gif developer"
-        className="mx-auto md:mx-0 md:absolute top-[45px] right-0 "
+        className="mx-auto md:mx-0 md:absolute top-[100px] right-0 "
       />
 
       <Contacts />
