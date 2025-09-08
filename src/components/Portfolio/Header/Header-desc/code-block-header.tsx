@@ -1,11 +1,10 @@
 import { CodeBlock } from "@/components/CodeBlock/codeblock";
 
 interface CodeBlockHeaderProps {
-    showCode: boolean;
+  showCode: boolean;
 }
 
-const sampleCode = `
-"use client";
+const sampleCode = `"use client";
 
 import { listStylesHeader, styleLangButtonHeader } from "../header-styles";
 import { useState } from "react";
@@ -21,7 +20,7 @@ const NavBar = ({}) => {
   const [showCodeBlock, setShowCodeBlock] = useState(false);
 
   return (
-      <nav className={navStylesHeader}>
+      <header className={navStylesHeader}>
         <Image src="/logo/logo.png" alt="Close menu" width={60} height={60} />
 
         <LangBtnList
@@ -39,28 +38,36 @@ const NavBar = ({}) => {
         <CodeBlockHeader showCode={showCodeBlock} />
 
         <NavBarListDesc />
-      </nav>
+      </header>
   );
 };
 
 export default NavBar;`;
 
-const CodeBlockHeader = ({ showCode}: CodeBlockHeaderProps) => {
+const CodeBlockHeader = ({ showCode }: CodeBlockHeaderProps) => {
   return (
     <>
-         {showCode && (
-                <div className="absolute top-[100px] left-0 w-full h-full bg-black/50">
-                  <CodeBlock
-                    language="tsx"
-                    filename="src/components/Portfolio/Header/Header-desc/portfolio-navbar-desc.tsx"
-                    code={sampleCode}
-                    highlightLines={[5, 11, 12]}
-                    breadcrumb={["scrollx-ui", "src", "components", "Portfolio", "Header", "Header-desc", "portfolio-navbar-desc.tsx"]}
-                    showStats={true}
-                    theme="dark"
-                  />
-                </div>
-              )}
+      {showCode && (
+        <div className="absolute top-[100px] left-0 w-full h-full bg-black/50">
+          <CodeBlock
+            language="tsx"
+            filename="src/components/Portfolio/Header/Header-desc/portfolio-navbar-desc.tsx"
+            code={sampleCode}
+            highlightLines={[5, 11, 12]}
+            breadcrumb={[
+              "scrollx-ui",
+              "src",
+              "components",
+              "Portfolio",
+              "Header",
+              "Header-desc",
+              "portfolio-navbar-desc.tsx",
+            ]}
+            showStats={true}
+            theme="dark"
+          />
+        </div>
+      )}
     </>
   );
 };
