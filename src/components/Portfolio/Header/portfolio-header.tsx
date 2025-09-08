@@ -7,9 +7,9 @@ const PortfolioHeader = () => {
 const isMobile = useMediaQuery('(max-width: 768px)');
   
   return (
-    <header>
+    <>
       {isMobile ? <NavBarMobile /> : <NavBar />}
-    </header>
+    </>
   );
 };
 

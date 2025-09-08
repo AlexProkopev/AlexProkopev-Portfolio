@@ -6,17 +6,14 @@ import LangBtnList from "../../../Welcome/lng-btn-list";
 import useHandlers from "@/hooks/useHandlers";
 
 interface NavigateMobileProps {
-  isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const NavigateMobile = ({ isOpen, setIsOpen }: NavigateMobileProps) => {
+const NavigateMobile = ({ setIsOpen }: NavigateMobileProps) => {
   const { t } = useTranslation("common");
 
   const {handleNavigate} = useHandlers()
-
   
-
   return (
     <motion.nav
       className="backdrop-blur-md bg-white/10 rounded-lg shadow-lg fixed top-0 left-0 w-full h-full text-white flex flex-col items-center justify-center gap-8 z-40"

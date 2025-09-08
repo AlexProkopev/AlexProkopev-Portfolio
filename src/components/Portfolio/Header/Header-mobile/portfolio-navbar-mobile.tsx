@@ -9,7 +9,7 @@ const NavBarMobile = () => {
     <>
      <ActionButtonMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       <AnimatePresence>
-        {isOpen && (<NavigateMobile isOpen={isOpen} setIsOpen={setIsOpen}/>)}
+        {isOpen && (<NavigateMobile setIsOpen={setIsOpen}/>)}
       </AnimatePresence>
       
     </>
