@@ -1,4 +1,6 @@
-import MyQuotes from "./my-quotes";
+export const fileName = "src/components/Portfolio/AboutMe/about-me.tsx"
+export const breadCrumb = [ "portfolio", "src", "components", "Portfolio", "AboutMe", "about-me.tsx" ]
+export const code = `import MyQuotes from "./my-quotes";
 import AboutMeContent from "./content-about-me";
 import ActionsButton from "./actions-btn";
 import TitleAboutMe from "./title";
@@ -37,3 +39,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+`;

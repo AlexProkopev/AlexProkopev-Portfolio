@@ -1,4 +1,6 @@
-import HeroTitle from "./hero-title";
+export const fileName = "src/components/Portfolio/Hero/hero.tsx"
+export const breadCrumb = ["portfolio", "src", "components", "Portfolio", "Hero", "hero.tsx"]
+export const code = `import HeroTitle from "./hero-title";
 import Contacts from "./hero-contacts";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import TechSkills from "./hero-tech-skills";
@@ -14,14 +16,10 @@ import {
 } from "./hero-styles";
 import CodeBlockSection from "../Header/Header-desc/code-block-header";
 import { breadCrumb, code, fileName } from "./utils";
-import { useTranslation } from "next-i18next";
 
 const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [showCodeBlock, setShowCodeBlock] = useState(false);
-  const {ready} = useTranslation("common");
-
-  if (!ready) return <div>Loading...</div>;
 
   return (
     <section id="home" className={sectionHero}>
@@ -53,3 +51,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+`;

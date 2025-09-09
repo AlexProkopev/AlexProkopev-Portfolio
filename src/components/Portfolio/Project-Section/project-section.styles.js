@@ -1,7 +1,7 @@
-export const titleStyles = "text-xl md:text-4xl font-bold text-center mb-10 text-white  "
+export const titleStyles = "text-xl md:text-4xl font-bold text-center mb-10 text-white"
 
 export const projectSectionStyles =
-  "mt-[50px] mb-[100px] text-secondary text-center text-3xl font-bold md:mt-[60px] xl:mt-[120px] ";
+  "relative mt-[50px] mb-[100px] text-secondary text-center text-3xl font-bold md:mt-[60px] xl:mt-[120px] ";
 export const projectListStyles =
   "px-6 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8";
 

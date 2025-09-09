@@ -9,8 +9,8 @@ import {
 import { useTranslation } from "next-i18next";
 
 const AboutMeContent = () => {
-  const { t } = useTranslation('aboutme');
-  const content = 'Fullstack React Developer...';
+  const { t } = useTranslation("aboutme");
+  const content = "Fullstack React Developer...";
   const { text, animateText, index } = useMakeAnimation();
 
   useEffect(() => {
@@ -23,9 +23,9 @@ const AboutMeContent = () => {
         initial={{ x: 200, rotateY: -45, opacity: 0 }}
         whileInView={{ x: 0, rotateY: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 80, damping: 10 }}
-      >
+       >
         {text}
-        {text.length < 30 && "|"}
+        {text.length < 30 && text.length < 25 &&  "|"}
       </motion.p>
 
       <motion.p
@@ -34,9 +34,7 @@ const AboutMeContent = () => {
         transition={{ type: "spring", stiffness: 80, damping: 10 }}
       >
         {t("descriptionStart")}{" "}
-        <span className={contentHighlightStyles}>
-          {t("descriptionMiddle")}
-        </span>
+        <span className={contentHighlightStyles}>{t("descriptionMiddle")}</span>
         {t("descriptionEnd")}
       </motion.p>
     </div>

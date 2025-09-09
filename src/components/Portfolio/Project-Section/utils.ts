@@ -1,4 +1,6 @@
-import ProjectCards from "./project-list";
+export const fileName = "src/components/Portfolio/Project-Section/project-section.tsx"
+export const breadCrumb = [ "portfolio", "src", "components", "Portfolio", "Project-Section", "project-section.tsx" ]
+export const code = `import ProjectCards from "./project-list";
 import TitleProject from "./title";
 import { projectSectionStyles } from "./project-section.styles";
 import { useTranslation } from "next-i18next";
@@ -32,3 +34,4 @@ const ProjectSection = () => {
 };
 
 export default ProjectSection;
+`;

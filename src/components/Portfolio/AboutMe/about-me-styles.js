@@ -4,9 +4,9 @@ export const titleStyles= "text-2xl font-bold text-center mb-6 tracking-wide xl:
 
 export const wrapperImgMobileStyles= "w-[180px] h-[180px] mx-auto mb-6"
 
-export const wrapperImgDescStyles= "w-[180px] h-[180px] mx-auto mb-6 absolute top-[25%] right-0 transform translate-y-[-25%]"
+export const wrapperImgDescStyles= "w-[180px] h-[180px] mx-auto mb-6 absolute top-[25%] right-0 transform translate-y-[-25%] md:block"
 
-export const imgMobileStyles= "rounded-full mx-auto shadow-lg shadow-[#00e0ff]/20"
+export const imgMobileStyles= "rounded-full mx-auto shadow-lg shadow-[#00e0ff]/20 "
 
 export const quoteWrapperStyles = `
   mt-[10px] relative px-4 py-3 w-[300px] mx-auto text-center text-[12px] font-medium text-[#e0e0e0]

@@ -1,4 +1,17 @@
-"use client";
+export const breadCrumb=[
+          "portfolio",
+          "src",
+          "components",
+          "Portfolio",
+          "Header",
+          "Header-desc",
+          "portfolio-navbar-desc.tsx",
+        ]
+
+export const fileName = "src/components/Portfolio/Header/Header-desc/portfolio-navbar-desc.tsx"
+
+
+export const code = `"use client";
 
 import { listStylesHeader, styleLangButtonHeader } from "../header-styles";
 import { useState } from "react";
@@ -43,3 +56,5 @@ const NavBar = ({}) => {
 };
 
 export default NavBar;
+
+`

@@ -21,6 +21,7 @@ type CodeBlockProps = {
   highlightLines?: number[];
   breadcrumb?: string[];
   showStats?: boolean;
+  styles?: string;
   theme?: "dark" | "light";
 } & (
   | {
@@ -47,6 +48,7 @@ export const CodeBlock = ({
   breadcrumb = [],
   showStats = true,
   theme = "dark",
+  styles = "max-w-5xl mx-auto my-10",
 }: CodeBlockProps) => {
   const [copied, setCopied] = React.useState(false);
   const [activeTab, setActiveTab] = React.useState(0);
@@ -112,7 +114,8 @@ export const CodeBlock = ({
   const stats = showStats ? getCodeStats(activeCode || "") : null;
 
   return (
-    <div
+   <div className={styles}>
+     <div
       className={`relative w-full rounded-xl overflow-hidden shadow-2xl ${
         theme === "dark" ? "bg-slate-900" : "bg-white"
       } border ${theme === "dark" ? "border-slate-700" : "border-gray-200"}`}
@@ -347,5 +350,6 @@ export const CodeBlock = ({
         </div>
       )}
     </div>
+   </div>
   );
 };
