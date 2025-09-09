@@ -12,7 +12,7 @@ import {
   heroGif,
   sectionHero,
 } from "./hero-styles";
-import CodeBlockSection from "../Header/Header-desc/code-block-header";
+import CodeBlockSection from "../../CodeBlock/code-block-section";
 import { breadCrumb, code, fileName } from "./utils";
 import { useTranslation } from "next-i18next";
 

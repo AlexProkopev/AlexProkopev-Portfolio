@@ -8,7 +8,7 @@ import { sectionStyles } from "./about-me-styles";
 import { useTranslation } from "next-i18next";
 import ShowCodeBtn from "@/components/ShowCodeBtn/show-code-btn";
 import { useState } from "react";
-import CodeBlockSection from "../Header/Header-desc/code-block-header";
+import CodeBlockSection from "../../CodeBlock/code-block-section";
 import { breadCrumb, code, fileName } from "./utils";
 import { codeBlockWrap } from "../Hero/hero-styles";
 

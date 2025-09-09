@@ -7,7 +7,7 @@ import Image from "next/image";
 import NavBarListDesc from "./nav-bar-list";
 import LangBtnList from "../../../Welcome/lng-btn-list";
 import ShowCodeBtn from "@/components/ShowCodeBtn/show-code-btn";
-import CodeBlockSection from "./code-block-header";
+import CodeBlockSection from "../../../CodeBlock/code-block-section";
 import { breadCrumb, code, fileName } from "./utils";
 
 const NavBar = ({}) => {
