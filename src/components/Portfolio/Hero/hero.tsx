@@ -28,6 +28,7 @@ const Hero = () => {
       <div className={btnCodeWrapper}>
         <ShowCodeBtn showCode={showCodeBlock} setShowCode={setShowCodeBlock} />
       </div>
+      
       <CodeBlockSection
         showCode={showCodeBlock}
         styles={codeBlockWrap}

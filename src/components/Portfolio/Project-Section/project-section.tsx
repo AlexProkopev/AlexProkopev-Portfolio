@@ -6,6 +6,7 @@ import ShowCodeBtn from "@/components/ShowCodeBtn/show-code-btn";
 import { useState } from "react";
 import CodeBlockSection from "../Header/Header-desc/code-block-header";
 import { breadCrumb, code, fileName } from "./utils";
+import { codeBlockWrap } from "../Hero/hero-styles";
 
 const ProjectSection = () => {
   const { ready } = useTranslation("projects");
@@ -20,6 +21,7 @@ const ProjectSection = () => {
         <ShowCodeBtn showCode={showCodeBlock} setShowCode={setShowCodeBlock} />
       </div>
       <CodeBlockSection
+        styles={codeBlockWrap}
         showCode={showCodeBlock}
         code={code}
         fileName={fileName}

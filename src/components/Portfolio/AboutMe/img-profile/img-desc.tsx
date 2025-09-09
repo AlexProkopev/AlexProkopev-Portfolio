@@ -3,11 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { imgMobileStyles, wrapperImgDescStyles } from "../about-me-styles";
 
-interface ImgDescProps {
-  showCodeIsOpen: boolean;
-}
-
-const ImgDesc = ({showCodeIsOpen}: ImgDescProps) => {
+const ImgDesc = () => {
   const isMobile = useMediaQuery("(max-width: 1023px)");
   return (
     <>
@@ -23,7 +19,7 @@ const ImgDesc = ({showCodeIsOpen}: ImgDescProps) => {
             alt="About Me"
             width={180}
             height={180}
-            className={showCodeIsOpen ? "hidden" : imgMobileStyles}
+            className={imgMobileStyles}
           />
         </motion.div>
       )}

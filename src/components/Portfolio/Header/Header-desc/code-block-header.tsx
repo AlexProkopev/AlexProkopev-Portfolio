@@ -1,4 +1,5 @@
 import { CodeBlock } from "@/components/CodeBlock/codeblock";
+import { AnimatePresence } from "motion/react";
 
 interface CodeBlockHeaderProps {
   showCode: boolean;
@@ -12,7 +13,7 @@ interface CodeBlockHeaderProps {
 
 const CodeBlockSection = ({ showCode, styles, fileName,breadCrumb,code }: CodeBlockHeaderProps) => {
   return (
-    <>
+    <AnimatePresence>
       {showCode && (
         <CodeBlock
           language="tsx"
@@ -25,7 +26,7 @@ const CodeBlockSection = ({ showCode, styles, fileName,breadCrumb,code }: CodeBl
           styles={styles}
         />
       )}
-    </>
+    </AnimatePresence>
   );
 };
 

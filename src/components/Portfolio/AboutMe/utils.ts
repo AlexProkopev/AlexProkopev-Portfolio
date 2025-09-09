@@ -12,6 +12,7 @@ import ShowCodeBtn from "@/components/ShowCodeBtn/show-code-btn";
 import { useState } from "react";
 import CodeBlockSection from "../Header/Header-desc/code-block-header";
 import { breadCrumb, code, fileName } from "./utils";
+import { codeBlockWrap } from "../Hero/hero-styles";
 
 const AboutMe = () => {
   const [showCodeBlock, setShowCodeBlock] = useState(false);
@@ -23,6 +24,7 @@ const AboutMe = () => {
         <ShowCodeBtn showCode={showCodeBlock} setShowCode={setShowCodeBlock} />
       </div>
       <CodeBlockSection
+        styles={codeBlockWrap}
         showCode={showCodeBlock}
         code={code}
         fileName={fileName}
@@ -33,7 +35,7 @@ const AboutMe = () => {
       <MyQuotes />
       <AboutMeContent />
       <ActionsButton />
-      <ImgDesc showCodeIsOpen={showCodeBlock} />
+      <ImgDesc />
     </section>
   );
 };
