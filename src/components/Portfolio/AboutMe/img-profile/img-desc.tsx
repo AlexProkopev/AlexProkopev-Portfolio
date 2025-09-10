@@ -11,6 +11,7 @@ const ImgDesc = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5, y: 50 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          whileHover={{ scale: 1.05, rotate: 25, boxShadow: "0px 0px 20px rgba(0, 224, 255, 0.6)" }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className={wrapperImgDescStyles}
         >

@@ -2,9 +2,9 @@ export const sectionStyles= 'relative text-secondary px-4 py-8 mx-auto'
 
 export const titleStyles= "text-2xl font-bold text-center mb-6 tracking-wide xl:text-start"
 
-export const wrapperImgMobileStyles= "w-[180px] h-[180px] mx-auto mb-6"
+export const wrapperImgMobileStyles= "w-[180px] h-[180px] mx-auto mb-6 rounded-full shadow-lg shadow-[#00e0ff]/20 md:hidden"
 
-export const wrapperImgDescStyles= "w-[180px] h-[180px] mx-auto mb-6 absolute top-[25%] right-0 transform translate-y-[-25%] md:block"
+export const wrapperImgDescStyles= "w-[180px] h-[180px] rounded-full mx-auto mb-6 absolute top-[25%] right-0 transform translate-y-[-25%] md:block"
 
 export const imgMobileStyles= "rounded-full mx-auto shadow-lg shadow-[#00e0ff]/20 "
 
