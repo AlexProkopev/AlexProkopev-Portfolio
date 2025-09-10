@@ -14,14 +14,10 @@ import {
 } from "./hero-styles";
 import CodeBlockSection from "../../CodeBlock/code-block-section";
 import { breadCrumb, code, fileName } from "./utils";
-import { useTranslation } from "next-i18next";
 
 const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [showCodeBlock, setShowCodeBlock] = useState(false);
-  const {ready} = useTranslation("common");
-
-  if (!ready) return <div>Loading...</div>;
 
   return (
     <section id="home" className={sectionHero}>

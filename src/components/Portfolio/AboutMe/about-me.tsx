@@ -5,7 +5,6 @@ import TitleAboutMe from "./title";
 import ImgDesc from "./img-profile/img-desc";
 import ImgMobile from "./img-profile/img-mobile";
 import { sectionStyles } from "./about-me-styles";
-import { useTranslation } from "next-i18next";
 import ShowCodeBtn from "@/components/ShowCodeBtn/show-code-btn";
 import { useState } from "react";
 import CodeBlockSection from "../../CodeBlock/code-block-section";
@@ -14,10 +13,8 @@ import { codeBlockWrap } from "../Hero/hero-styles";
 
 const AboutMe = () => {
   const [showCodeBlock, setShowCodeBlock] = useState(false);
-  const { ready } = useTranslation("aboutme");
-  if (!ready) return <div>Loading...</div>;
   return (
-    <section id="aboutme" className={sectionStyles}>
+    <section id="about-me" className={sectionStyles}>
       <div className="absolute top-[40px] left-[-100px] z-50">
         <ShowCodeBtn showCode={showCodeBlock} setShowCode={setShowCodeBlock} />
       </div>

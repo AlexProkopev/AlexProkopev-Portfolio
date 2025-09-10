@@ -10,7 +10,7 @@ i18n
   .init({
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru', 'uk'],
-    debug: true,
+    debug: false,
     ns: ['common'],
     defaultNS: 'common',
     backend: {

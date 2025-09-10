@@ -3,7 +3,7 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { useRef, useMemo } from "react";
 import * as THREE from "three";
-import { backCardStyles } from "./project-section.styles";
+import { backCardStyles } from "./projects.styles";
 
 interface ProjectItemBackProps {
   dev: string[];

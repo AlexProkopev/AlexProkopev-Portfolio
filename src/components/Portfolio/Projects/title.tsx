@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import { titleStyles } from "./project-section.styles";
+import { titleStyles } from "./projects.styles";
 const TitleProject = () => {
     const { t } = useTranslation("projects");
     

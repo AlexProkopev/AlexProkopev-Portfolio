@@ -3,7 +3,7 @@
 import { Project } from "@/types/projectsData";
 import ProjectItem from "./project-item";
 import { projectData } from "@/utils/projectData";
-import { projectListStyles } from "./project-section.styles";
+import { projectListStyles } from "./projects.styles";
 
 const ProjectCards = () => {
   return (

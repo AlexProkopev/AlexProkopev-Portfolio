@@ -20,7 +20,7 @@ const ContactsButton = ({ id, path }: ContactsButtonProps) => {
         target='_blank'
         className={linkStyles}
       >
-        <Image src={`/contact-png/${id}.png`} alt={id} width={24} height={24} />
+        <Image src={`/contact-png/${id}.png`} alt={id} width={24} height={24} style={{ objectFit: "contain" }} />
       </motion.a>
     </li>
   );

@@ -13,7 +13,7 @@ import {
   imageWrapperStyles,
   linkWrapperStyles,
   listItemStyles,
-} from "./project-section.styles";
+} from "./projects.styles";
 
 interface ProjectItemProps {
   project: Project;
@@ -41,7 +41,9 @@ const ProjectItem = ({ project, index }: ProjectItemProps) => {
             <Image
               src={project.image}
               alt={project.titleKey}
-              fill
+              width={800}
+              height={600}
+              style={{ width: "100%", height: "100%" }}
               className="object-cover"
             />
           </div>

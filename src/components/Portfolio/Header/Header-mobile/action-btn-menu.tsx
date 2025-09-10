@@ -14,7 +14,7 @@ const ActionButtonMenu = ({ isOpen, setIsOpen }: ActionButtonMenuProps) => {
         alt="Close menu"
         width={40}
         height={40}
-        className=""
+        style={{ width: "auto", height: "40px" }}
       />
       <motion.button
         type="button"

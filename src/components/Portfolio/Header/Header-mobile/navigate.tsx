@@ -49,15 +49,6 @@ const NavigateMobile = ({ setIsOpen }: NavigateMobileProps) => {
         >
           <p>{t("projects")}</p>
         </motion.li>
-        <motion.li
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-          onClick={() => handleNavigate(setIsOpen, "contact")}
-        >
-          <p>{t("contact")}</p>
-        </motion.li>
       </ul>
 
       <LangBtnList
