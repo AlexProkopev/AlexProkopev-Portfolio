@@ -23,5 +23,20 @@
   "project7_description": "Сайт для магазину шоколаду",
 
   "project8_title": "Drinkify",
-  "project8_description": "Додаток з рецептами коктейлів та рекомендаціями"
+  "project8_description": "Додаток з рецептами коктейлів та рекомендаціями",
+
+  "project9_title": "Flip card - міні-Гра",
+  "project9_description": "Гра з переворотом карт та пасткою у вигляді бомби",
+
+  "project10_title": "Компонент фільтрів",
+  "project10_description": "Компонент для фільтрації даних з перекладом",
+
+  "project11_title": "Слайдер з відгуками",
+  "project11_description": "Компонент для слайдера з відгуками чи чим завгодно",
+
+  "project12_title": "Post/GET requests", 
+  "project12_description": "Лендінг з формою реєстрації, валідацією, та відображенням даних про зареєстрованих користувачів з ефектом скелетона при завантаженні",
+
+  "project13_title": "Лендінг портфоліо",
+  "project13_description": "Проста, семантична верстка на чистому HTML/CSS"
 }

@@ -1,6 +1,6 @@
 {
   "projects_section_title": "Projects",
-  
+
   "project1_title": "CRM Restaurant",
   "project1_description": "Admin panel for managing restaurant workflow",
 
@@ -23,5 +23,20 @@
   "project7_description": "Website for chocolate shop",
 
   "project8_title": "Drinkify",
-  "project8_description": "Cocktail recipes and recommendation app"
+  "project8_description": "Cocktail recipes and recommendation app",
+
+  "project9_title": "Card mini-Game",
+  "project9_description": "Card flip and trap game",
+
+  "project10_title": "Filters Component",
+  "project10_description": "Data filtering component with translation",
+
+  "project11_title": "Reviews Slider",
+  "project11_description": "Generic reviews slider component",
+
+  "project12_title": "Post/GET requests",
+  "project12_description": "Landing page with registration form, validation, and data display with skeleton loading",
+
+  "project13_title": "Portfolio Landing",
+  "project13_description": "Simple, semantic layout using pure HTML/CSS"
 }

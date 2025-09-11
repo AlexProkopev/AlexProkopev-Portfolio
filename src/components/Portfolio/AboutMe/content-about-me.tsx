@@ -10,7 +10,7 @@ import { useTranslation } from "next-i18next";
 
 const AboutMeContent = () => {
   const { t } = useTranslation("aboutme");
-  const content = "Fullstack React Developer...";
+  const content = "Fullstack React Developer";
   const { text, animateText, index } = useMakeAnimation();
 
   useEffect(() => {

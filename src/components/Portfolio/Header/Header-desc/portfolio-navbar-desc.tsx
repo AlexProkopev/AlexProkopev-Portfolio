@@ -24,7 +24,6 @@ const NavBar = ({}) => {
       />
 
       <ShowCodeBtn
-       
         showCode={showCodeBlock}
         setShowCode={setShowCodeBlock}
       />
