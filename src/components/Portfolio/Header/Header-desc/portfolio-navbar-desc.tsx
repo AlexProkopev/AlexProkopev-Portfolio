@@ -15,7 +15,7 @@ const NavBar = ({}) => {
 
   return (
     <header className={navStylesHeader}>
-      <Image src="/logo/logo.png" alt="Close menu" width={60} height={60} />
+      <Image src="/logo/logo.png" alt="Logo" width={60} height={60} />
 
       <LangBtnList
         styleButton={styleLangButtonHeader}

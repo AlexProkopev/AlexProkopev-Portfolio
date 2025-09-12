@@ -8,10 +8,10 @@ interface ActionButtonMenuProps {
 
 const ActionButtonMenu = ({ isOpen, setIsOpen }: ActionButtonMenuProps) => {
   return (
-    <div className="backdrop-blur-md rounded-lg shadow-lg fixed top-0 left-1 right-4 z-50 flex justify-between h-[60px] w-full px-4">
+    <div className="backdrop-blur-md rounded-lg shadow-lg fixed top-0 left-1 right-4 z-50 flex items-center justify-between h-[60px] w-full px-4">
       <Image
         src="/logo/logo.png"
-        alt="Close menu"
+        alt="Logo"
         width={40}
         height={40}
         style={{ width: "auto", height: "40px" }}

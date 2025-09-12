@@ -12,7 +12,7 @@ interface NavigateMobileProps {
 const NavigateMobile = ({ setIsOpen }: NavigateMobileProps) => {
   const { t } = useTranslation("common");
 
-  const {handleNavigate} = useHandlers()
+  const { handleNavigate } = useHandlers();
   
   return (
     <motion.nav
@@ -36,7 +36,7 @@ const NavigateMobile = ({ setIsOpen }: NavigateMobileProps) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          onClick={() => handleNavigate(setIsOpen, "aboutme")}
+          onClick={() => handleNavigate(setIsOpen, "about-me")}
         >
           <p>{t("about")}</p>
         </motion.li>

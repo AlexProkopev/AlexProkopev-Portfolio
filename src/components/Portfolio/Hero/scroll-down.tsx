@@ -10,7 +10,7 @@ const ScrollDown = () => {
 
   return (
     <motion.button
-      onClick={() => handleScroll('aboutme')}
+      onClick={() => handleScroll('about-me')}
       type="button"
       className="block mx-auto mt-[50px]"
       animate={{ y: [0, -20, 0] }}
