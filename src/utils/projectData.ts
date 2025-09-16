@@ -87,6 +87,22 @@ export const projectData: Project[] = [
     link: "https://alexprokopev.github.io/portfolio-novik/",
   },
   {
+    id: 14,
+    titleKey: "project14_title",
+    descriptionKey: "project14_description",
+    image: "/project/template_shops.jpg",
+    dev: [
+      "/svg-icons/next-dot.svg",
+      "/svg-icons/tailwindcss.svg",
+      "/svg-icons/js.svg",
+      "/svg-icons/typescript.svg",
+      "/svg-icons/development.svg",
+      
+
+    ],
+    link: "https://tamplate-shop-app-visits.vercel.app/",
+  },
+  {
     id: 2,
     titleKey: "project2_title",
     descriptionKey: "project2_description",

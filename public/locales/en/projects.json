@@ -38,5 +38,8 @@
   "project12_description": "Landing page with registration form, validation, and data display with skeleton loading",
 
   "project13_title": "Portfolio Landing",
-  "project13_description": "Simple, semantic layout using pure HTML/CSS"
+  "project13_description": "Simple, semantic layout using pure HTML/CSS",
+
+  "project14_title": "Business Card",
+  "project14_description": "Template for creating a shop business card in Telegram using Next.js"
 }
